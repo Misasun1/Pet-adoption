@@ -21,7 +21,7 @@ $row = mysqli_fetch_assoc($result);
 
 // var_dump($row);
 
-if ($row['image'] != 'empty-plate.jpg') {
+if ($row['image'] != 'img/defeault_animal.jpg') {
     unlink("img/{$row['image']}");
 }
 

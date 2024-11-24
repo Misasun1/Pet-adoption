@@ -64,13 +64,16 @@ $row = mysqli_fetch_assoc($resultUser);
     <title>Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
     <div class="container-fluid">
-        <nav class="navbar bg-body-tertiary rounded-4 mt-3">
+        <nav class="navbar bg-body-tertiary rounded-4 mt-3 animate__animated animate__fadeInDown">
             <div class="container-fluid justify-content-start text-light">
                 <div></div>
                 <img src="../img/logo.png" class="rounded-circle me-3
@@ -96,9 +99,9 @@ $row = mysqli_fetch_assoc($resultUser);
 
     <div class="container text-center my-5">
 
-        <h1>Senior Pet</h1>
+        <h1 class="animate__animated animate__fadeInTopLeft">Senior Pet</h1>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 ">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 animate__animated  animate__fadeInLeft">
             <?= $layout ?>
 
         </div>

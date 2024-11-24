@@ -33,9 +33,7 @@ if (isset($_SESSION["user"]) && !isset($_SESSION["adm"])) {
 
 if (isset($_POST['adopt'])) {
 
-  // $sqlJoin = "SELECT * FROM `animals` LEFT JOIN pet_adoption on animals.animalId = pet_adoption.pet_id RIGHT JOIN users ON pet_adoption.user_Id = users.userId";
-  // $resultJoin = mysqli_query($connect, $sqlJoin);
-  // $row = mysqli_fetch_assoc($resultJoin);
+
 
 
   $userID = $_SESSION['user'];
