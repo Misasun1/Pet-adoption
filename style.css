@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Mocha';
+    src: url(font/CSMocha-Regular.otf) format(opentype);
+}
+
+body{
+        background: linear-gradient(236deg,#fc9cb2,#cb5349,#dbaa58,#dce19e);
+        background-size: 240% 240%;
+        animation: gradient-animation 40s ease infinite;
+      
+      
+      @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+    
+      
+}
+}
+
+@media(max-width: 768px) {
+  nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  
+  }    
+  }
+
+
+.navbar{
+    padding: auto;
+    background-color: #edc0389e !important;
+}
+
+h5{
+  font-family: 'Mocha';
+  color: #f0b28c !important;
+  -webkit-text-stroke: #700d26 1px !important;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+
+}
+
+h1{
+    font-family: 'Mocha';
+    font-size: 5rem;
+    color: #e5c961;
+    -webkit-text-stroke: #cb5349 2px;
+    text-shadow: #c24b14  5px 4px;
+}
+
+#imgLogo {
+    width: 5.5rem;
+    outline: groove 4px rgb(218, 143, 68);
+}
+
+/* button */
+.btn {
+  position: relative;
+  color: #c24b14;
+  border: none;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+  
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn:before{
+   top: 0;
+   left: 0;
+   border-bottom-color: transparent;
+   border-right-color: transparent;
+   border-top-color: orangered;
+   border-left-color: orangered;
+}
+.btn:after{
+   bottom: 0;
+   right: 0;
+   border-top-color: transparent;
+   border-left-color: transparent;
+   border-bottom-color: orangered;
+   border-right-color: orangered;
+}
+.btn:hover:before,
+.btn:hover:after {
+  border-color: orangered;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px orangered, 0 0 5px orangered inset;
+}
+
+
+/* card */
+.card {
+  height: 40rem;
+  object-fit: co;
+}
+
+#cardPet{
+  object-fit: cover;
+  height:50% ;
+
+}
+
+
+
+#imgProfile {
+ height: 4rem;
+ outline: dotted 4px rgb(229, 102, 63);
+}
+
+
+input, textarea {
+  background-color: rgba(216, 180, 48, 0.582) !important;
+  color: #700d26 !important;
+}
+
+.table {
+  width: 20% !important;
+  /* box-sizing: border-box; */
+
+}
