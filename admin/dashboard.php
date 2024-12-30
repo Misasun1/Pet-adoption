@@ -30,11 +30,12 @@ if (mysqli_num_rows($result1) > 0) {
     foreach ($rows as $anim) {
 
         $layout .= "
+       
     <div class = 'my-3 '> 
    <div class='card my-3 mx-auto text-center rounded-4 bg-danger bg-gradient bg-opacity-25 text-light' style='width: 18rem;'>
   <img src='../img/{$anim['image']}' class='card-img-top' id = 'cardPet'alt='image of {$anim['name']}'>
   <div class='card-body'>
-    <h5 class='card-title display-4'>{$anim['name']}</h5>
+    <h5 class='card-title display-5'>{$anim['name']}</h5>
     <p class='card-text'>Breed : {$anim['breed']}</p>
 
 
@@ -46,6 +47,7 @@ if (mysqli_num_rows($result1) > 0) {
         <a href='delete.php?id={$anim['animalId']}' class='btn btn-danger  bg-gradient bg-opacity-10 rounded-3 text-warning border-3'>Delete</a>
 
   </div>
+</div>
 </div>
     
     
@@ -83,19 +85,19 @@ if (mysqli_num_rows($result1) > 0) {
 
         <nav class="navbar bg-body-tertiary rounded-4 mt-3 d-flex justify-content-around">
             <div class="container-fluid ">
-                <img src="../img/logo.png" class="rounded-circle me-3
+                <img src="../img/logo.png" class="rounded-circle me-3 
                 " alt="logo Rescue Haven" id="imgLogo">
 
 
-                <a class="btn btn-sm me-2" href="dashboard.php">Home</a>
+                <a class="btn btn-sm  me-2" href="dashboard.php">Home</a>
                 <a class="btn btn-sm  me-2" href="create.php">Add a new Pet</a>
-                <a class="btn btn-sm  me-2" href="adoption-overview.php">Adoption overview</a>
+                <a class="btn btn-sm my-3 me-2" href="adoption-overview.php">Adoption overview</a>
                 <a class="btn btn-sm  me-2" href="user-overview.php">Users overview</a>
                 <a class="btn btn-sm  me-5 " href="../login/logout.php?logout">Logout</a>
 
                 <!-- imageProfile account + HI nameAdm-->
 
-                <img src=" <?= "../img/{$row['profile_img']} " ?>" class="rounded-circle me-2" id="imgProfile">
+                <img src=" <?= "../img/{$row['profile_img']} " ?>" class="rounded-circle me-2 my-3" id="imgProfile">
                 <h5 class="text-warning me-5"> Hello <?= $row['first_name'] ?></h5>
 
                 <a href="edit_profile_adm.php" class="ml-5 " title="Edit your profile"><i class="fa-solid fa-ellipsis-vertical fa-fade fs-5" style="color: #e37e2b;"></i></a>

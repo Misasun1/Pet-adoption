@@ -105,11 +105,30 @@ h1{
 }
 .btn:hover:before,
 .btn:hover:after {
+
   border-color: orangered;
   height: 100%;
   width: 100%;
   box-shadow: 0 0 5px orangered, 0 0 5px orangered inset;
 }
+
+.btn:hover{
+    color: #ebe0cf !important;
+}
+
+/* submit button */
+
+#submitBtn:hover{
+  border-color: orangered 1px !important;
+  background-color: #f58a58 !important;
+  color: #ebe0cf !important;
+  /* height: 100%;
+  width: 100%; */
+  box-shadow: 0 0 5px orangered, 0 0 5px orangered inset !important;
+}
+
+
+
 
 
 /* card */
@@ -137,8 +156,9 @@ input, textarea {
   color: #700d26 !important;
 }
 
-.table {
-  width: 20% !important;
-  /* box-sizing: border-box; */
+/* #table {
+  width: 50% !important;
+  box-sizing: border-box !important;
 
-}
+} */
+

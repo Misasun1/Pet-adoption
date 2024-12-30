@@ -27,6 +27,10 @@ if (mysqli_num_rows($result) > 0) {
 
 foreach ($rows as $row) {
 
+    $available = $row['status_anim'] == "adopted" ? " pet adopted" : " Take me Home";
+    $not_avail = $row['status_anim'] == "adopted" ? "disabled" : "";
+
+
     $layout .= " <div class = 'my-3 '> 
     <div class='card my-3 mx-auto text-center rounded-4 bg-danger bg-opacity-25  bg-gradient text-light' style='width: 18rem;'>
   <img src='../img/{$row['image']}' class='card-img-top' id = 'cardPet' alt='image of {$row['name']}'>
@@ -39,7 +43,7 @@ foreach ($rows as $row) {
    <br>
     <form action='adoption.php' method='POST'>
         <input type='hidden' name = 'pet_id' value = '{$row['animalId']}'>
-        <button type='submit' name= 'adopt' value = 'Take me Home' class = 'btn btn-danger-sm  bg-gradient bg-opacity-25 rounded-3 border-light border-3 text-warning'><i class='fa-solid fa-paw' style='color: #FFD43B;'></i>Take Me Home <i class='fa-solid fa-paw' style='color: #FFD43B;'></i></button></form>
+        <button type='submit' name= 'adopt' value ='$available' $not_avail class = 'btn btn-danger-sm  bg-gradient bg-opacity-25 rounded-3 border-light border-3 text-warning'><i class='fa-solid fa-paw' style='color: #FFD43B;'></i>$available <i class='fa-solid fa-paw' style='color: #FFD43B;'></i></button></form>
     <br>
   </div>
 </div>
@@ -75,7 +79,7 @@ $row = mysqli_fetch_assoc($resultUser);
     <div class="container-fluid">
         <nav class="navbar bg-body-tertiary rounded-4 mt-3 animate__animated animate__fadeInDown">
             <div class="container-fluid justify-content-start text-light">
-                <div></div>
+
                 <img src="../img/logo.png" class="rounded-circle me-3
                 " alt="logo Rescue Haven" id="imgLogo">
 
@@ -88,7 +92,7 @@ $row = mysqli_fetch_assoc($resultUser);
 
                 <img src=" <?= "../img/{$row['profile_img']} " ?>" class="rounded-circle me-2" id="imgProfile">
 
-                <h5 class="text-light me-5"> Hello <?= $row['first_name'] ?></h5>
+                <h5 class="text-light me-5 mx-auto"> Hello <?= $row['first_name'] ?></h5>
 
                 <a href="edit_profile.php" class="ml-5 " title="Edit your profile"><i class="fa-solid fa-ellipsis-vertical fa-fade fs-5" style="color: #e37e2b;"></i></a>
             </div>

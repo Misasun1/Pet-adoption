@@ -28,6 +28,8 @@ $layout = '';
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 
+    $available = $row['status_anim'] == "adopted" ? " pet adopted" : " Take me Home";
+    $not_avail = $row['status_anim'] == "adopted" ? "disabled" : "";
 
 
     $layout = "
@@ -51,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
 
                 <form action='adoption.php' method='POST'>
                     <input type='hidden' name = 'pet_id' value = '{$row['animalId']}'>
-                    <button type='submit' name= 'adopt' value = 'Take me Home' class = 'btn btn-danger-sm  bg-gradient bg-opacity-50 rounded-3 border-light border-3 rounded-2 text-warning'><i class='fa-solid fa-paw' style='color: #FFD43B;'></i>Take Me Home <i class='fa-solid fa-paw' style='color: #FFD43B;'></i></button></form>
+                    <button type='submit' name= 'adopt' value = '$available' $not_avail  class = 'btn btn-danger-sm  bg-gradient bg-opacity-50 rounded-3 border-light border-3 rounded-2 text-warning fw-5 px-4'><i class='fa-solid fa-paw' style='color: #FFD43B;'></i>$available  <i class='fa-solid fa-paw' style='color: #FFD43B;'></i></button></form>
                 <br>
 
                  </div>

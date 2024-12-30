@@ -45,10 +45,10 @@ if (mysqli_num_rows($result) > 0) {
                 <br>
                 <br>
                 <hr>
-                <div class = 'd-flex justify-content-around ml-5 text-center'>
-                <a href='adoption.php?id={$row['animalId']}' class='btn btn- bg-gradient border-danger rounded-5 border-3 px-5'>Take me Home</a>
+                <div class = 'd-flex justify-content-around  text-center'>
+
                 <br>
-                <a href='dashboard.php' class='btn btn-warning bg-gradient border-danger rounded-5 border-3 px-5'>Back to list</a>
+                <a href='dashboard.php' class='btn btn-warning bg-gradient border-danger rounded-5 border-3 px-5 mx-auto'>Back to list</a>
                  </div>
                 
              

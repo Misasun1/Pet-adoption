@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && !isset($_SESSION['adm'])) {
 
 require_once "../components/db_connect.php";
 
-$sql = "SELECT * FROM `users` where status LIKE 'user%'";
+$sql = "SELECT * FROM `users` where status LIKE 'user%'  OR (status LIKE 'adm%') IS NOT TRUE";
 $result = mysqli_query($connect, $sql);
 $layout = '';
 
@@ -42,7 +42,10 @@ if (mysqli_num_rows($result) > 0) {
     ";
     }
 } else {
-    $layout = 'No data available';
+    $layout = "<div class ='mx-auto my-5 text-light display-6'>
+    <p> No data available</p>
+    </div>
+    ";
 }
 
 
@@ -66,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
 
 <body>
 
-    <div class="container rounded-1 bg-secondary bg-opacity-25 text-center ">
+    <div class="container rounded-1 bg-gradient text-center ">
         <br>
         <div class="">
             <a href="dashboard.php" class="btn btn-warning bg-opacity-50 bg-gradient rounded-3 border-light border-3 text-light bg-opacity-75 mt-3" id="log">Back to Dashboard</a>

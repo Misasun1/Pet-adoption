@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && !isset($_SESSION['adm'])) {
 require_once "../components/db_connect.php";
 
 
-$sqlAdopt = "SELECT * FROM `pet_adoption` LEFT JOIN animals on pet_adoption.pet_id = animals.animalId RIGHT JOIN users ON pet_adoption.user_Id = users.userId";
+$sqlAdopt = "SELECT * FROM `pet_adoption` LEFT JOIN animals on pet_adoption.pet_id = animals.animalId RIGHT JOIN users ON pet_adoption.user_Id = users.userId where status LIKE 'user%'  OR (status LIKE 'adm%') IS NOT TRUE";
 $resultAdopt = mysqli_query($connect, $sqlAdopt);
 $layout = '';
 
@@ -75,10 +75,10 @@ if (mysqli_num_rows($resultAdopt) > 0) {
         <br>
         <h1>Adoption Overview</h1>
 
-        <table class='table table-danger bg-opacity-50 bg-gradient border-light border-3  w-25 rounded-4 mx-auto cols-6'>
+        <table class='table table-danger bg-opacity-50 bg-gradient border-light border-3  w-25 rounded-4 mx-auto cols-6' id="table">
             <thead>
                 <tr>
-                    <th scope='col'>#</th>
+                    <th scope='col'>Pet Id</th>
                     <th scope='col'>Pet Name</th>
                     <th scope='col'>Pet Age</th>
                     <th scope='col'>Breed</th>

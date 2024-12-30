@@ -100,12 +100,12 @@ if (isset($_POST['update-profile'])) {
 
 
                     <!-- image profile -->
-                    <div class="mb-3">
+                    <div class="mb-3 ">
                         <label for="image" class="form-label">Image</label>
                         <input type="file" id="image" class="form-control rounded-4" name="iamge">
                     </div>
-                    <div class="mb-3">
-                        <input type="submit" class="btn btn-danger" name="update-profile">
+                    <div class="mb-3 my-5">
+                        <input type="submit" class="btn btn-danger me-2" name="update-profile" id="submitBtn">
                         <a href="<?= $redirectTo ?>" class="btn btn-warning bg-opacity-25">Back</a>
                     </div>
                 </form>

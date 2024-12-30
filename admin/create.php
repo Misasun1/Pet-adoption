@@ -89,7 +89,7 @@ if (isset($_POST['add_pet'])) {
 
 
 
-        <form method="POST" enctype="multipart/form-data" class="rounded-4  bg-gradient text-light py-4 px-5">
+        <form method="POST" enctype="multipart/form-data" class="rounded-4  bg-gradient text-light py-4 px-5 w-50 mx-auto">
             <!-- name -->
             <div class="mb-3 text-center">
                 <label for="name" class="form-label "><strong class="write">Name</strong></label>
@@ -172,7 +172,7 @@ if (isset($_POST['add_pet'])) {
 
 
                     <div class="">
-                        <input type="submit" class="btn btn-dark bg-gradient rounded-4 border-light border-2 px-4" name="add_pet" value="Submit">
+                        <input type="submit" class="btn btn-dark bg-gradient rounded-4 border-light border-2 px-4" name="add_pet" value="Submit" id="submitBtn">
                         <br>
                         <a href="dashboard.php" class="btn btn-warning bg-gradient my-5 rounded-5 border-light border-2">Back to Menu</a>
                     </div>

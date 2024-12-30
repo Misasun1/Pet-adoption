@@ -244,7 +244,7 @@ if (isset($_POST['register'])) {
                         </div>
 
                         <div class="mb-3">
-                            <input type="submit" class="btn btn-danger bg-gradient bg-opacity-25 rounded-4 border-light border-2 px-4" name="register">
+                            <input type="submit" class="btn btn-danger bg-gradient bg-opacity-25 rounded-4 border-light border-2 px-4" name="register" id="submitBtn">
                             <br>
                             <br>
                             <p>Already have an account?</p>

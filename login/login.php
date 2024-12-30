@@ -104,7 +104,7 @@ if (isset($_POST['log_in'])) {
                         </div>
 
                         <div class="mb-3">
-                            <input type="submit" class="btn btn- bg-gradient rounded-4 border-light border-2 px-4" name="log_in">
+                            <input type="submit" class="btn btn bg-gradient rounded-4 border-light border-2 px-4" name="log_in" id="submitBtn">
                             <br>
                             <p><strong>OR</strong></p>
                             <br>
