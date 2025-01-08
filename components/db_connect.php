@@ -4,7 +4,8 @@ try {
     $host = "localhost";
     $user = "root";
     $password = "";
-    $database = "be23_exam5_animal_adoption_mariamisaowusu";
+    // create at first a database in phpmyadmin
+    $database = "";
 
     $connect = mysqli_connect(
         $host,

@@ -171,17 +171,46 @@ if (isset($_POST['register'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-    <div class="container text-center py-5">
-        <div class="row">
+    <div class="container text-center py-5 ">
+        <!-- 
+        <iframe src="https://lottie.host/embed/57124971-4e17-4fe2-9e3f-3cd1f96c3381/KaISeIoCAU.lottie"></iframe> -->
+
+
+
+        <iframe src="https://lottie.host/embed/20b7b33a-dc49-46b9-92e3-b07dcb153e53/9RqG8CyS1X.lottie" style="width: 250px; height: 250px;" id="dog2"></iframe>
+
+
+        <!-- <iframe src="https://lottie.host/embed/01b433e8-68aa-4c6d-b0ee-572d925801b6/XCj2YDOjyQ.lottie" ></iframe> -->
+
+        <div class="row ">
+
+            <div class="bg-gradient rounded-4 col col-md-6 mx-auto " id="reg-info">
+                <h5 class="reg-welc">Welcome to Rescue Haven!</h5>
+                <p>Your journey to finding a forever friend starts here. <br> Whether you're looking to adopt a playful pup, a curious kitten, or any furry companion, Rescue Haven is the perfect place for you. <br>By logging in, you'll get exclusive access to the latest pets in need of loving homes, track your adoption process, and connect with a community of passionate animal lovers. <br>
+                    Together, let's give these animals the second chance they deserve.
+                    <br>
+                    <br>
+                    <strong id="start" class="display-6">Your new best friend is waiting!</strong>
+                </p>
+                <br>
+                <br>
+                <p class="text-light">Already have an account?</p>
+                <a href="login.php" class="btn btn-warning bg-gradient rounded-4 border-light border-2 px-4">Login now</a>
+
+            </div>
             <div class="col col-md-6 mx-auto">
-                <h1 class="my-4 display-4">Sign Up</h1>
+
                 <div class="style">
                     <form method="POST" enctype="multipart/form-data" class="rounded-4  bg-gradient text-light py-4 px-5">
                         <div class="mb-3">
+
+
+                            <h1 class="my-4 display-4">Sign Up</h1>
+
 
                             <!-- first name -->
                             <label for="first_name" class="form-label "><strong class="write">First Name</strong></label>
@@ -247,8 +276,6 @@ if (isset($_POST['register'])) {
                             <input type="submit" class="btn btn-danger bg-gradient bg-opacity-25 rounded-4 border-light border-2 px-4" name="register" id="submitBtn">
                             <br>
                             <br>
-                            <p>Already have an account?</p>
-                            <a href="login.php" class="btn btn-warning bg-gradient rounded-4 border-light border-2 px-4">Login</a>
 
 
                         </div>

@@ -78,15 +78,24 @@ if (isset($_POST['log_in'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
     <div class="container text-center py-5">
+        <!-- test svg -->
+
+        <div class="svg-img1">
+
+            <iframe class="cat" src="https://lottie.host/embed/d22068b3-bd9e-41d0-a7ac-514fd82bb503/CyMxd8mYjA.lottie" style="width: 250px; height: 250px;"></iframe>
+
+
+        </div>
+        <!-- end -->
         <div class="row">
             <div class="col col-md-6 mx-auto">
-                <h1 class="my-4 display-1">Login</h1>
+                <h1 class="my-4 display-1" id="login-title">Login</h1>
                 <div class="style">
                     <form method="POST" enctype="multipart/form-data" class="rounded-4  bg-gradient text-light py-4 px-5">
 
@@ -106,10 +115,12 @@ if (isset($_POST['log_in'])) {
                         <div class="mb-3">
                             <input type="submit" class="btn btn bg-gradient rounded-4 border-light border-2 px-4" name="log_in" id="submitBtn">
                             <br>
-                            <p><strong>OR</strong></p>
                             <br>
+                            <p><strong>OR</strong></p>
 
-                            <a href="register.php" class="btn btn- bg-gradient rounded-4 border-light border-2 px-4">Register</a>
+                            <br>
+                            <p>Don't have an account?</p>
+                            <a href="register.php" class="btn btn- bg-gradient rounded-4 border-light border-2 px-4">Register now</a>
 
 
 
@@ -121,6 +132,10 @@ if (isset($_POST['log_in'])) {
                 </div>
             </div>
         </div>
+
+
+        <iframe class="dog" src="https://lottie.host/embed/a6db9d88-8450-4505-a82b-a4b38e0dadc8/aCDpVkl6EU.lottie" style="width: 250px; height: 250px;"></iframe>
+
     </div>
 
 
